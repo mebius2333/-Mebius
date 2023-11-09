@@ -1,0 +1,110 @@
+/* From uiverse.io by @joe-watson-sbf */
+.card2 {
+  width: 190px;
+  height: 120px;
+  transition: all .5s;
+  box-shadow: 15px 15px 30px rgba(25, 25, 25, 0.11),
+    -15px -15px 30px rgba(60, 60, 60, 0.082);
+  text-align: center;
+  overflow: hidden;
+  /* 该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位 */
+  margin-left: 400px;
+
+
+}
+
+.card2:hover {
+  height: 180px;
+}
+
+.card2 .header {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #212121;
+  margin-bottom: 16px;
+}
+
+.card2 .header .title {
+  font-size: 1.1em;
+  /* 字母间距*/
+  letter-spacing: .1em;
+  /* 字体粗细 */
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 4px 0 14px 0;
+  /* padding:10px 四周 */
+  /* padding:10px 20px 上下 左右 */
+  /* padding:10px 20px 30px 上 左右 下 */
+  /* padding:10px 20px 30px 40px 上右下左 */
+  transition: all .5s;
+  /* 过度动画 */
+  color: rgb(0, 255, 255);
+}
+
+.card2 .content {
+  display: block;
+  text-align: justify;
+  color: rgb(0, 255, 255);
+  margin: 0 18px;
+}
+
+.card2 .content p {
+  transition: all .5s;
+  font-size: 1em;
+  margin-bottom: 8px;
+}
+
+.card3 {
+  width: 190px;
+  height: 120px;
+  transition: all .5s;
+  box-shadow: 15px 15px 30px rgba(25, 25, 25, 0.11),
+    -15px -15px 30px rgba(60, 60, 60, 0.082);
+  text-align: center;
+  overflow: hidden;
+  margin-left: 920px;
+  margin-top: -120px;
+}
+
+.card3:hover {
+  height: 180px;
+}
+
+.card3 .header {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #212121;
+  margin-bottom: 16px;
+}
+
+
+
+.card3 .header .title {
+  font-size: 1.1em;
+  letter-spacing: .1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  /* 小写转大写 */
+  padding: 4px 0 14px 0;
+  transition: all .5s;
+  color: blueviolet;
+}
+
+.card3 .content {
+  display: block;
+  text-align: justify;
+  color: blueviolet;
+  margin: 0 18px;
+}
+
+.card3 .content p {
+  transition: all .5s;
+  font-size: 1em;
+  margin-bottom: 8px;
+}
