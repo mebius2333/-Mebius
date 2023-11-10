@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>武装龙</title>
+    <link rel="stylesheet" href="./css/shizuo3.css">
+
+</head>
+<style>
+    body {
+        background-image: url("img/img2/24.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-size: 100% 100%;
+
+
+
+    }
+</style>
+
+<body>
+    <div class="szb1">
+        <span onclick="FormHide()" class="c1">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/1.1.png" width="100%" height="100%"></div>
+            <div class="ok1-img1" width="100px"><img src="img/img3/1.2.png" width="100%" height="100%"></div>
+
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx1">
+
+                <h4>进化前</h4><br>
+                <b>入場曲:增加1張龍武裝甲卡片到手牌中。如果本次對戰中自己已離場的武裝從者數為4個以上，則會回復自己的EP 1點。</b>
+                <br><b class="r1" onclick="Show()">龙武装甲</b>
+            </div>
+            <div class="jsxx1">
+                <h4>进化后</h4><br><br>
+                <b>進化時:給予1個敵方的從者4點傷害。增加1張龍武裝甲卡片到手牌中。</b>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="szb">
+        <span onclick="Hide()" class="c2">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/0.png" width="100%" height="100%"></div>
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx1">
+
+                <br><br>
+                <b>自己的回合中，當從者進入自己的戰場時，給予1個該從者+0/+1效果，並使其轉變為武裝從者。使這個護符消失。</b>
+
+            </div>
+        </div>
+    </div>
+    <div class="szb0">
+        <span onclick="Hide()" class="c2">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/5.3.png" width="100%" height="100%"></div>
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx1">
+
+                <br><br>
+                <b>隨機給予1個敵方的從者2點傷害。<br>
+                    增加1張龍武裝甲卡片到手牌中。</b>
+
+            </div>
+        </div>
+    </div>
+    <div class="szba">
+        <span onclick="Hide()" class="c2">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/12.3.png" width="100%" height="100%"></div>
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx3">
+                <b class="daxiao">倒數 10<br>
+                    無法被能力破壞。（倒數 效果可以破壞這個護符）<br>
+                    每當有從者進入自己的戰場時，使這個護符減少1回合倒數。<br>
+                    自己的回合結束時，給予自己的從者全體+1/+1效果。如果這個護符的倒數 為5以下，則會由原本的+1/+1轉變為+2/+2。<br>
+                    謝幕曲 給予敵方的主戰者與敵方的從者全體5點傷害。<br>
+
+            </div>
+        </div>
+    </div>
+    <div class="yihua1">
+        <span onclick="Hide()" class="c2">X</span>
+        <div class="ok2">
+            <div class="ok1-img1" width="100px"><img src="img/img3/3.3.png" width="100%" height="100%"></div>
+        </div>
+
+    </div>
+    <div class="yihua2">
+        <span onclick="Hide1()" class="c3">X</span>
+        <div class="ok2">
+            <div class="ok1-img1" width="100px"><img src="img/img3/3.2.png" width="100%" height="100%"></div>
+        </div>
+
+    </div>
+    <div class="yihua3">
+        <span onclick="Hide1()" class="c3">X</span>
+        <div class="ok2">
+            <div class="ok1-img1" width="100px"><img src="img/img3/7.png" width="100%" height="100%"></div>
+        </div>
+
+    </div>
+    <div class="yihua4">
+        <span onclick="Hide()" class="c2">X</span>
+        <div class="ok2">
+            <div class="ok1-img1" width="100px"><img src="img/img3/16.2.png" width="100%" height="100%"></div>
+        </div>
+
+    </div>
+    <div class="yihua5">
+        <span onclick="Hide1()" class="c3">X</span>
+        <div class="ok2">
+            <div class="ok1-img1" width="100px"><img src="img/img3/16.1.png" width="100%" height="100%"></div>
+        </div>
+
+    </div>
+    <div class="jinghua1">
+        <span onclick="Hide2()" class="c3">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/11.3.png" width="100%" height="100%"></div>
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx1">
+                <b class="yanse">滅劍燄龍‧進攻模式</b><br>
+                <b>當自己的其他武裝從者進行攻擊時，給予該從者+2/+2效果。<br>
+                    進化時:給予敵方的從者全體5點傷害。增加1張龍武裝甲卡片到手牌中。<br>
+                    ※此卡片與「滅劍燄龍」視為同一張卡片。</b>
+            </div>
+        </div>
+    </div>
+    <div class="jinghua2">
+        <span onclick="Hide1()" class="c3">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/11.4.png" width="100%" height="100%"></div>
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx3">
+                <b class="yanse">滅劍燄龍‧防禦模式</b><br>
+                <b class="blue">守護</b><br>
+                <b class="daxiao">只要這個從者在戰場上，給予自己的主戰者與自己的從者全體及所有新進入自己戰場的從者「受到的傷害-2」效果。<br>
+                    自己的回合結束時，回復自己的主戰者與自己的從者全體3點生命值。<br>
+                    進化時 抽取2張卡片。<br>
+                    ※此卡片與「滅劍燄龍」視為同一張卡片。</b>
+            </div>
+        </div>
+    </div>
+    <div class="jinghua3">
+        <span onclick="Hide()" class="c2">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/11.5.png" width="100%" height="100%"></div>
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx3">
+                <b class="yanse">滅劍燄龍‧爆破模式</b><br>
+                <b>每當有從者進入自己的戰場時，給予該從者<b class="browm">突進</b> 效果。<br>
+                    自己的回合結束時，給予敵方的主戰者與「這個從者的攻擊力」等量的傷害。<br>
+                    進化時 回復自己的PP 2點。<br>
+                    ※此卡片與「滅劍燄龍」視為同一張卡片。</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="szb2">
+        <span onclick="FormHide()" class="c1">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/2.1.png" width="100%" height="100%"></div>
+            <div class="ok1-img1" width="100px"><img src="img/img3/2.2.png" width="100%" height="100%"></div>
+
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx1">
+
+                <h4>进化前</h4><br>
+                <b class="browm">突進</b><br>
+                <b> 入場曲 增加1張龍武裝甲卡片到手牌中。如果本次對戰中自己已離場的武裝從者數為4個以上，則會給予1個敵方的從者與敵方的主戰者各3點傷害。</b>
+
+            </div>
+            <div class="jsxx1">
+                <h4>进化后</h4><br><br>
+                <b>與進化前能力相同。（入場曲 能力除外）</b>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="szb3">
+        <span onclick="FormHide()" class="c1">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/3.1.png" width="100%" height="100%"></div>
+
+
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx1">
+
+                <br><br>
+                <b>使自己的PP(能量)最大值+1。</b><br>
+                <b> 如果使用這張卡片時覺醒 狀態已發動，則會抽取1張卡片。</b>
+                <br><b class="ga" onclick="yihua1()">点击查看异画</b>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="szb4">
+        <span onclick="FormHide()" class="c1">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/4.1.png" width="100%" height="100%"></div>
+            <div class="ok1-img1" width="100px"><img src="img/img3/4.2.png" width="100%" height="100%"></div>
+
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx1">
+
+                <h4>进化前</h4><br>
+                <b>入場曲:給予1個自己的其他從者+1/+1效果。如果覺醒 狀態已發動，則會抽取1張卡片。</b>
+
+            </div>
+            <div class="jsxx1">
+                <h4>进化后</h4><br><br>
+                <b>无</b>
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="szb5">
+        <span onclick="FormHide()" class="c1">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/5.1.png" width="100%" height="100%"></div>
+            <div class="ok1-img1" width="100px"><img src="img/img3/5.2.png" width="100%" height="100%"></div>
+
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx1">
+
+                <h4>进化前</h4><br>
+                <b>入場曲:如果本次對戰中自己已離場的武裝從者數為4個以上，則會獲得+2/+2與疾馳 效果。
+                    謝幕曲 增加1張龍鎚碎擊卡片到手牌中。</b>
+                <br><b class="r1" onclick="Show2()">龍鎚碎擊</b>
+            </div>
+            <div class="jsxx1">
+                <h4>进化后</h4><br><br>
+                <b>與進化前能力相同。（入場曲 能力除外)
+                </b>
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="szb6">
+        <span onclick="FormHide()" class="c1">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/6.1.png" width="100%" height="100%"></div>
+            <div class="ok1-img1" width="100px"><img src="img/img3/6.2.png" width="100%" height="100%"></div>
+
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx1">
+
+                <h4>进化前</h4><br>
+                <b class="blue">守护</b><br>
+                <b>入場曲:給予敵方的主戰者1點傷害。回復自己的主戰者1點生命值。</b>
+
+            </div>
+            <div class="jsxx1">
+                <h4>进化后</h4><br>
+                <b class="blue">守护</b><br>
+                <b>自己的回合結束時，如果自己剩餘的EP多於敵方的EP，則會使自己的PP最大值+1。（若該回合尚未進化解禁，則剩餘EP為0）</b>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="szb7">
+        <span onclick="FormHide()" class="c1">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/7.1.png" width="100%" height="100%"></div>
+
+
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx1">
+
+                <h4>进化前</h4><br>
+                <b>增加1張龍武裝甲卡片到手牌中。<br>
+                    如果自己的手牌中有武裝從者卡，則會隨機將1張武裝從者卡，由自己的牌堆抽取到手牌中。</b>
+                <br><b class="r1" onclick="Show()">龙武装甲</b>
+                <br><b class="ga" onclick="yihua3()">点击查看异画</b>
+            </div>
+        </div>
+
+    </div>
+    <div class="szb8">
+        <span onclick="FormHide()" class="c1">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/8.1.png" width="100%" height="100%"></div>
+            <div class="ok1-img1" width="100px"><img src="img/img3/8.2.png" width="100%" height="100%"></div>
+
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx1">
+
+                <h4>进化前</h4><br>
+
+                <b>當這個從者的攻擊力或生命值因能力而獲得+效果時，抽取1張卡片。（每個自己的回合僅限發動1次）<br>
+                    入場曲:如果覺醒 狀態已發動，則會獲得<b class="browm">突進</b> 效果。抽取1張卡片。</b>
+            </div>
+            <div class="jsxx1">
+                <h4>进化后</h4><br><br>
+                <b>與進化前能力相同。（入場曲 能力除外）</b>
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="szb9">
+        <span onclick="FormHide()" class="c1">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/9.1.png" width="100%" height="100%"></div>
+            <div class="ok1-img1" width="100px"><img src="img/img3/9.2.png" width="100%" height="100%"></div>
+
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx1">
+
+                <h4>进化前</h4><br>
+
+                <b class="browm">突進</b><br>
+                當這個從者的攻擊力或生命值因能力而獲得+效果時，召喚1隻堅鱗的龍首巨蛇到戰場上。（每個自己的回合僅限發動1次）
+                入場曲 爆能強化 6； 獲得+3/+3效果。</b>
+            </div>
+            <div class="jsxx1">
+                <h4>进化后</h4><br><br>
+                <b>與進化前能力相同。（入場曲 能力除外）</b>
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="szb10">
+        <span onclick="FormHide()" class="c1">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/10.1.png" width="100%" height="100%"></div>
+            <div class="ok1-img1" width="100px"><img src="img/img3/10.2.png" width="100%" height="100%"></div>
+
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx1">
+
+                <h4>进化前</h4><br>
+
+                <b class="browm">突進</b><br>
+                當這個從者的攻擊力或生命值因能力而獲得+效果時，召喚1隻堅鱗的龍首巨蛇到戰場上。（每個自己的回合僅限發動1次）
+                入場曲 爆能強化 6； 獲得+3/+3效果。</b>
+            </div>
+            <div class="jsxx1">
+                <h4>进化后</h4><br><br>
+                <b>與進化前能力相同。（入場曲 能力除外）</b>
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="szb11">
+        <span onclick="FormHide()" class="c1">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/11.1.png" width="100%" height="100%"></div>
+            <div class="jsxx2">
+                <div class="jsxx1">
+
+
+                    <b class="ga" onclick="jinghua2()">‧滅劍燄龍‧防禦模式</b><br>
+
+                    <b class="ga" onclick="jinghua3()"> ‧滅劍燄龍‧爆破模式</b><br>
+                    <b class="ga" onclick="jinghua1()"> ‧滅劍燄龍‧進攻模式</b><br>
+                    這個從者進化時，如果本次對戰中自己已離場的武裝從者數為4個以上，則會進化為命運<b class="yanse">抉擇</b> 所指定的從者。（因能力而進化除外）</b>
+                </div>
+
+            </div>
+
+            <div class="ok1-img1" width="100px"><img src="img/img3/11.2.png" width="100%" height="100%"></div>
+
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx1">
+
+                <h4>进化前</h4><br>
+
+                入場曲:如果自己的手牌中有龍武裝甲，則會隨機捨棄1張該卡片，並獲得「不消費EP即可進化」效果。（1回合中依舊只能進化1張卡片）
+            </div>
+            <div class="jsxx1">
+                <h4>进化后</h4><br><br>
+                <b>進化時:給予1個敵方的從者5點傷害。增加1張龍武裝甲卡片到手牌中。</b>
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="szb12">
+        <span onclick="FormHide()" class="c1">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/12.1.png" width="100%" height="100%"></div>
+            <div class="ok1-img1" width="100px"><img src="img/img3/12.2.png" width="100%" height="100%"></div>
+
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx1">
+
+                <h4>进化前</h4><br>
+
+                <b class="browm">突進</b><br>
+                當這個從者的攻擊力或生命值因能力而獲得+效果時，抽取1張卡片。
+                入場曲 召喚1個龍山溫泉到戰場上。</b><br>
+                <b class="ga" onclick="Show3()">龍山溫泉</b>
+            </div>
+            <div class="jsxx1">
+                <h4>进化后</h4><br><br>
+                <b>與進化前能力相同。（入場曲 能力除外）</b>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="szb13">
+        <span onclick="FormHide()" class="c1">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/13.1.png" width="100%" height="100%"></div>
+            <div class="ok1-img1" width="100px"><img src="img/img3/13.2.png" width="100%" height="100%"></div>
+
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx3">
+
+                <h4>进化前</h4>
+
+                <b class="daxiao">（1）回復自己的PP 2點。<br>
+                    （2）隨機破壞1個敵方的從者。<br>
+                    （3）獲得「無法被攻擊」與「使因能力所受到的傷害轉變為0」效果。<br>
+                    自己的回合中，當這個從者的攻擊力或生命值因能力而獲得+效果，或是這個從者進化時，依序發動上述1種能力。上限數為3。<br>
+                    <b class="green"> 疾馳</b></b>
+            </div>
+            <div class="jsxx1">
+                <h4>进化后</h4><br><br>
+                <b>與進化前能力相同。（入場曲 能力除外）</b>
+            </div>
+        </div>
+
+    </div>
+    <div class="szb14">
+        <span onclick="FormHide()" class="c1">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/14.1.png" width="100%" height="100%"></div>
+            <div class="ok1-img1" width="100px"><img src="img/img3/14.2.png" width="100%" height="100%"></div>
+
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx1">
+
+                <h4>进化前</h4><br>
+
+                <b>激奏 1； 隨機給予1個敵方的從者3點傷害。<br>
+                    <b class="browm">突進</b><br>
+                    可無視<b class="blue">守護</b> 效果進行攻擊。<br>
+                    入場曲 如果上個自己的回合中已經使用八獄卡，則會獲得<b class="green">疾馳</b> 效果。</b>
+            </div>
+            <div class="jsxx1">
+                <h4>进化后</h4><br><br>
+                <b>與進化前能力相同。（入場曲 能力除外）</b>
+            </div>
+        </div>
+
+    </div>
+    <div class="szb15">
+        <span onclick="FormHide()" class="c1">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/15.1.png" width="100%" height="100%"></div>
+            <div class="ok1-img1" width="100px"><img src="img/img3/15.2.png" width="100%" height="100%"></div>
+
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx1">
+
+                <h4>进化前</h4><br>
+
+                <b>激奏 1； 抽取1張卡片。<br>
+
+                    <b class="blue">守護</b><br>
+                    無法被能力破壞。（攻擊或能力所給予的傷害可以破壞這個從者）<br>
+                    入場曲 給予敵方的從者全體-5/-5效果。回復自己的主戰者5點生命值。</b>
+            </div>
+            <div class="jsxx1">
+                <h4>进化后</h4><br><br>
+                <b>與進化前能力相同。（入場曲 能力除外）</b>
+            </div>
+        </div>
+
+    </div>
+    <div class="szb16">
+        <span onclick="FormHide()" class="c1">X</span>
+        <div class="ok1">
+            <div class="ok1-img1" width="100px"><img src="img/img3/16.3.png" width="100%" height="100%"></div>
+            <div class="ok1-img1" width="100px"><img src="img/img3/16.4.png" width="100%" height="100%"></div>
+        </div>
+        <div class="jsxx2">
+            <div class="jsxx3">
+
+                <h4>进化前</h4><br>
+                <b class="red">必殺</b><br>
+
+                <b class="daxiao">
+                    入場曲 如果覺醒
+                    狀態已發動，則會獲得「使下一次受到的傷害轉變為0」效果。使這個從者進化。如果自己的PP最大值為10，則會在這場對戰中，給予自己的主戰者「自己的回合中，當自己的從者對敵方的從者進行攻擊時，給予敵方的主戰者2點傷害」效果。主戰者無法重複疊加此效果。</b>
+            </div>
+            <div class="jsxx1">
+                <h4>进化后</h4><br><br>
+                <b>與進化前能力相同。（入場曲 能力除外）</b>
+                <b class="ga" onclick="yihua4()">查看异画</b>
+            </div>
+        </div>
+
+    </div>
+    <div class="body">
+        <div class="zhong">
+            <div class="js1">
+
+                <div class="js1-img" width="100px" onclick="FormShow()"><img src="img/img3/1.1.png" width="100%"
+                        height="100%"></div>
+                <div class="jsxx">
+                    <b>-----点击卡片查看-----</b>
+                    <br>
+                    <h4>熾拳之龍</h4><br>
+                    <b>类型:武装</b><br>
+                    <b>职业:龙族</b><br>
+                    <b>cv:井泽诗织</b><br>
+                    <b>制作:800以太</b><br>
+                    <b>稀有度:黄金卡</b><br>
+                    <b>卡包:示天龙剑</b><br>
+                    <b>分解:250/600(珍藏版)</b>
+
+
+                </div>
+
+
+
+                <div class="jsxx">
+                    <b>-----点击卡片查看-----</b>
+                    <br>
+                    <h4>瞬刃龍人</h4><br>
+                    <b>类型:武装</b><br>
+                    <b>职业:龙族</b><br>
+                    <b>cv:佐藤拓也</b><br>
+                    <b>制作:200以太</b><br>
+                    <b>稀有度:白银卡</b><br>
+                    <b>卡包:八獄魔境</b><br>
+                    <b>分解:50/120(珍藏版)</b>
+
+
+                </div>
+                <div class="js1-img" width="100px" onclick="Form()"><img src="img/img3/2.1.png" width="100%"
+                        height="100%"></div>
+            </div>
+
+            <div class="js1">
+
+                <div class="js1-img" width="100px" onclick="Form1()"><img src="img/img3/3.1.png" width="100%"
+                        height="100%"></div>
+                <div class="jsxx">
+                    <b>-----点击卡片查看-----</b>
+                    <br>
+                    <h4>龍之啟示</h4><br>
+                    <b>类型:无</b><br>
+                    <b>职业:龙族</b><br>
+                    <b>cv:无</b><br>
+                    <b>制作:无</b><br>
+                    <b>稀有度:青铜卡</b><br>
+                    <b>卡包:基本卡</b><br>
+                    <b>分解:无</b>
+
+
+                </div>
+
+
+
+                <div class="jsxx">
+                    <b>-----点击卡片查看-----</b>
+                    <br>
+                    <h4>育龍員</h4><br>
+                    <b>类型:无</b><br>
+                    <b>职业:龙族</b><br>
+                    <b>cv:鈴木崚汰</b><br>
+                    <b>制作:50以太</b><br>
+                    <b>稀有度:青铜卡</b><br>
+                    <b>卡包: 天象樂土</b><br>
+                    <b>分解:10/ 30 (珍藏版)</b>
+
+
+                </div>
+                <div class="js1-img" width="100px" onclick="Form2()"><img src="img/img3/4.1.png" width="100%"
+                        height="100%"></div>
+            </div>
+            <div class="js1">
+
+                <div class="js1-img" width="100px" onclick="Form3()"><img src="img/img3/5.1.png" width="100%"
+                        height="100%"></div>
+                <div class="jsxx">
+                    <b>-----点击卡片查看-----</b>
+                    <br>
+                    <h4>戰鎚龍人</h4><br>
+                    <b>类型:武装</b><br>
+                    <b>职业:龙族</b><br>
+                    <b>cv:无</b><br>
+                    <b>制作:800以太</b><br>
+                    <b>稀有度:黄金卡</b><br>
+                    <b>卡包:示天龙剑</b><br>
+                    <b>分解:250/600(珍藏版)</b>
+
+
+                </div>
+
+
+
+                <div class="jsxx">
+                    <b>-----点击卡片查看-----</b>
+                    <br>
+                    <h4>梅丹佐</h4><br>
+                    <b>类型:无</b><br>
+                    <b>职业:中立</b><br>
+                    <b>cv:豊田萌繪</b><br>
+                    <b>制作:3500以太</b><br>
+                    <b>稀有度:传说卡</b><br>
+                    <b>卡包:极天龙鸣</b><br>
+                    <b>分解:1000/2500(珍藏版)</b>
+
+
+                </div>
+                <div class="js1-img" width="100px" onclick="Form4()"><img src="img/img3/6.1.png" width="100%"
+                        height="100%"></div>
+            </div>
+            <div class="js1">
+
+                <div class="js1-img" width="100px" onclick="Form5()"><img src="img/img3/7.1.png" width="100%"
+                        height="100%"></div>
+                <div class="jsxx">
+                    <b>-----点击卡片查看-----</b>
+                    <br>
+                    <h4>龍之武裝</h4><br>
+                    <b>类型:武装</b><br>
+                    <b>职业:龙族</b><br>
+                    <b>cv:无</b><br>
+                    <b>制作:200以太</b><br>
+                    <b>稀有度:白银卡</b><br>
+                    <b>卡包:示天龙剑</b><br>
+                    <b>分解:50/120(珍藏版)</b>
+
+
+                </div>
+
+
+
+                <div class="jsxx">
+                    <b>-----点击卡片查看-----</b>
+                    <br>
+                    <h4>誅龍劍士</h4><br>
+                    <b>类型:无</b><br>
+                    <b>职业:龙族</b><br>
+                    <b>cv:坂泰斗</b><br>
+                    <b>制作:50以太</b><br>
+                    <b>稀有度:青铜卡</b><br>
+                    <b>卡包:示天龙剑</b><br>
+                    <b>分解:10/30(珍藏版)</b>
+
+
+                </div>
+                <div class="js1-img" width="100px" onclick="Form6()"><img src="img/img3/8.1.png" width="100%"
+                        height="100%"></div>
+            </div>
+            <div class="js1">
+
+                <div class="js1-img" width="100px" onclick="Form7()"><img src="img/img3/9.1.png" width="100%"
+                        height="100%"></div>
+                <div class="jsxx">
+                    <b>-----点击卡片查看-----</b>
+                    <br>
+                    <h4>堅鱗的龍首巨蛇</h4><br>
+                    <b>类型:无</b><br>
+                    <b>职业:龙族</b><br>
+                    <b>cv:无</b><br>
+                    <b>制作:200以太</b><br>
+                    <b>稀有度:白银卡</b><br>
+                    <b>卡包:极天龙鸣</b><br>
+                    <b>分解:50/120(珍藏版)</b>
+
+
+                </div>
+
+
+
+                <div class="jsxx">
+                    <b>-----点击卡片查看-----</b>
+                    <br>
+                    <h4>戰矛蜥蜴</h4><br>
+                    <b>类型:武装</b><br>
+                    <b>职业:龙族</b><br>
+                    <b>cv:无</b><br>
+                    <b>制作:200以太</b><br>
+                    <b>稀有度:白银</b><br>
+                    <b>卡包:示天龙剑</b><br>
+                    <b>分解:50/120(珍藏版)</b>
+
+
+                </div>
+                <div class="js1-img" width="100px" onclick="Form8()"><img src="img/img3/10.1.png" width="100%"
+                        height="100%"></div>
+            </div>
+            <div class="js1">
+
+                <div class="js1-img" width="100px" onclick="Form9()"><img src="img/img3/11.1.png" width="100%"
+                        height="100%"></div>
+                <div class="jsxx">
+                    <b>-----点击卡片查看-----</b>
+                    <br>
+                    <h4>灭剑炎龙</h4><br>
+                    <b>类型:武装</b><br>
+                    <b>职业:龙族</b><br>
+                    <b>cv:无</b><br>
+                    <b>制作:3500以太</b><br>
+                    <b>稀有度:传说卡</b><br>
+                    <b>卡包:示天龙剑</b><br>
+                    <b>分解:1000/2500(珍藏版)</b>
+
+
+                </div>
+
+
+
+                <div class="jsxx">
+                    <b>-----点击卡片查看-----</b>
+                    <br>
+                    <h4>秘湯之山脈龍</h4><br>
+                    <b>类型:宴樂</b><br>
+                    <b>职业:龙族</b><br>
+                    <b>cv:成田劍</b><br>
+                    <b>制作:3500以太</b><br>
+                    <b>稀有度:传说卡</b><br>
+                    <b>卡包:天象樂土</b><br>
+                    <b>分解:1000/2500(珍藏版)</b>
+
+
+                </div>
+                <div class="js1-img" width="100px" onclick="Form10()"><img src="img/img3/12.1.png" width="100%"
+                        height="100%"></div>
+            </div>
+            <div class="js1">
+
+                <div class="js1-img" width="100px" onclick="Form11()"><img src="img/img3/13.1.png" width="100%"
+                        height="100%"></div>
+                <div class="jsxx">
+                    <b>-----点击卡片查看-----</b>
+                    <br>
+                    <h4>黑翼霸主‧法露特</h4><br>
+                    <b>类型:无</b><br>
+                    <b>职业:龙族</b><br>
+                    <b>cv:三澤紗千香</b><br>
+                    <b>制作:3500以太</b><br>
+                    <b>稀有度:传说卡</b><br>
+                    <b>卡包:极天龙鸣</b><br>
+                    <b>分解:1000/2500(珍藏版)</b>
+
+
+                </div>
+
+
+
+                <div class="jsxx">
+                    <b>-----点击卡片查看-----</b>
+                    <br>
+                    <h4>遊獵的罪人</h4><br>
+                    <b>类型:八狱</b><br>
+                    <b>职业:龙族</b><br>
+                    <b>cv:佐倉綾音</b><br>
+                    <b>制作:3500以太</b><br>
+                    <b>稀有度:传说卡</b><br>
+                    <b>卡包:八狱魔镜</b><br>
+                    <b>分解:1000/2500(珍藏版)</b>
+
+
+                </div>
+                <div class="js1-img" width="100px" onclick="Form12()"><img src="img/img3/14.1.png" width="100%"
+                        height="100%"></div>
+            </div>
+            <div class="js1">
+
+                <div class="js1-img" width="100px" onclick="Form13()"><img src="img/img3/15.1.png" width="100%"
+                        height="100%"></div>
+                <div class="jsxx">
+                    <b>-----点击卡片查看-----</b>
+                    <br>
+                    <h4>禁牙執行者</h4><br>
+                    <b>类型:八狱</b><br>
+                    <b>职业:龙族</b><br>
+                    <b>cv:田村ゆかり</b><br>
+                    <b>制作:3500以太</b><br>
+                    <b>稀有度:传说卡</b><br>
+                    <b>卡包:八狱魔镜</b><br>
+                    <b>分解:1000/2500(珍藏版)</b>
+
+
+                </div>
+
+
+
+                <div class="jsxx">
+                    <b>-----点击卡片查看-----</b>
+                    <br>
+                    <h4>獨眼龍‧伊達政宗</h4><br>
+                    <b>类型:无</b><br>
+                    <b>职业:龙族</b><br>
+                    <b>cv:杉田智和</b><br>
+                    <b>制作:3500以太</b><br>
+                    <b>稀有度:传说卡</b><br>
+                    <b>卡包:极天龙鸣</b><br>
+                    <b>分解:1000/2500(珍藏版)</b>
+
+
+                </div>
+                <div class="js1-img" width="100px" onclick="Form14()"><img src="img/img3/16.3.png" width="100%"
+                        height="100%"></div>
+            </div>
+
+
+            <script src="./js/jquary.js"></script>
+            <script src="./js/szb.js"></script>
+</body>
+
+</html>

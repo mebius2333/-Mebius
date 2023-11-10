@@ -1,0 +1,311 @@
+* {
+        margin: 0;
+        padding: 0;
+}
+
+/*初始化，内边距，外边距设置为0*/
+a {
+        text-decoration: none;
+        /*取消文本超链接的下划线*/
+        color: white;
+}
+
+.head {
+        display: flex;
+        /*弹性布局*/
+        width: 100%;
+        height: 85px;
+        text-align: center;
+        /*文本居中对齐*/
+        background: rgba(0, 0, 0, 0.5);
+        /*黑色半透明背景，0，0，0为黑色，0.5为透明度*/
+        position: fixed;
+        /*固定定位，固定在网页窗口*/
+}
+
+.city {
+        height: 30px;
+        font-size: 30px;
+        /*字体大小*/
+        padding: 30px;
+}
+
+.jieshao,
+.jineng,
+.gushi {
+        height: 30px;
+        font-size: 20px;
+        padding: 5px 60px 5px 20px;
+        margin-left: 10px;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+        /*背景颜色设置为线性渐变，向右，由0.7的黑色透明到0.2的黑色透明*/
+        transition: all 0.3s ease-in-out;
+}
+
+.jieshao:hover,
+.jineng:hover,
+.gushi:hover {
+        transform: scale(1.2);
+        /*1.2倍的放大效果*/
+}
+
+h4 {
+        font-size: 1rem;
+        letter-spacing: 5px;
+        color: #0e3742;
+        /*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */
+        -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+        line-height: 0.80em;
+        outline: none;
+        /*边框外围的线*/
+        animation: animate 2s linear infinite;
+}
+
+/*创作动画*/
+@keyframes animate {
+
+        0%,
+        18%,
+        20%,
+        50.1%,
+        60%,
+        65.1%,
+        80%,
+        90.1%,
+        92% {
+                color: #fff;
+                text-shadow: 0 0 10px #03bcf4,
+                        0 0 10px #03bcf4,
+                        0 0 20px #03bcf4,
+                        0 0 40px #03bcf4,
+                        0 0 80px #03bcf4;
+        }
+}
+
+.zhong {
+        /* width:48%; */
+        margin-top: 10px;
+        margin-left: 350px;
+        margin-right: 350px;
+        background: rgba(0, 0, 0, 0.3);
+
+}
+
+.js1 {
+        display: flex;
+        flex: 2;
+        height: 250px;
+        margin: 15px;
+        justify-content: space-between;
+}
+
+.js1-text {
+        border-radius: 15px;
+        /*填满前一个div留下来的空白部分，可以用来让多个div横向排列，父容器要设置display:flex*/
+        color: white;
+        /* font-size: 25px; */
+        background: rgba(0, 0, 0, 0.2);
+}
+
+.jn1,
+.gs1,
+.gs2,
+.gs3 {
+        text-align: center;
+        font-size: 23px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+}
+
+.js2,
+.jn1,
+.jn2,
+.gs1,
+.gs1-1,
+.jsxx,
+.gs2,
+.gs2-1,
+.gs3,
+.gs3-1 {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 12px;
+        color: aliceblue;
+        line-height: 25px;
+}
+
+.js1-text h4 {
+        color: cyan;
+}
+
+.tab1 {
+        margin-left: 200px;
+}
+
+.a1 {
+        margin-left: 180px;
+}
+
+.szb1,.szb2,.szb3,.szb4,.szb5,.szb6,.szb7,.szb8,.szb9,.szb10,.szb11,.szb12,.szb13,.szb14,.szb15,.szb16,.szb17{
+        z-index: 998;
+        height: 700px;
+        width: 900px;
+        /* background-color: aqua; */
+        margin-top: 80px;
+        margin-left: 400px;
+        position: absolute;
+        background: url(../img/img3/n.jpg) no-repeat top center;
+        background-size: 100% 100%;
+        opacity: 1;
+        box-shadow: 0 5px 18px rgba(100, 0, 0, .5);
+        /* display: none; */
+        position: fixed;
+
+}
+
+.c1 {
+        float: right;
+        color: #fff;
+        -webkit-user-select: none;
+}
+
+.ok1 {
+        display: flex;
+        height: 250px;
+        margin-top: 100px;
+        flex: 2;
+        justify-content: space-evenly;
+
+}
+.jsxx1
+{
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 12px;
+        color: aliceblue;
+        line-height: 25px;
+        width: 300px;
+        font-size: 0.5em;
+}
+.jsxx2
+{
+        display: flex;
+        height: 200px;
+        flex: 2;
+        justify-content: space-evenly;
+
+}
+.szb,.szb0,.yihua1,.jinghua3,.szba,.yihua4
+ {
+        z-index: 999;
+        height: 700px;
+        width: 350px;
+        /* background-color: aqua; */
+        margin-top: 80px;
+        margin-left: 1340px;
+        position: absolute;
+        background: url(../img/img3/n.jpg) no-repeat top center;
+        background-size: 100% 100%;
+        opacity: 1;
+        /* display: none; */
+        position: fixed;
+}
+.yihua2,.yihua3,.jinghua2,.yihua5
+{
+        z-index: 999;
+        height: 700px;
+        width: 350px;
+        /* background-color: aqua; */
+        margin-top: 80px;
+        position: absolute;
+        background: url(../img/img3/n.jpg) no-repeat top center;
+        background-size: 100% 100%;
+        opacity: 1;
+        /* display: none; */
+        position: fixed;
+}
+.c2 {
+        float:left;
+        color: #fff;
+        -webkit-user-select: none;
+}
+.c3 {
+        float:right;
+        color: #fff;
+        -webkit-user-select: none;
+}
+.r1,.ga
+{
+        text-decoration:underline;
+      color:#66ccff;
+      -webkit-user-select: none;
+}
+.browm
+{
+        color: coral;
+}
+
+.ok2 {
+        display: flex;
+        height: 400px;
+        margin-top: 150px;
+        margin-left: 20px;
+
+        flex: 1;
+        justify-content: space-evenly;
+
+}
+.blue
+{
+        color: aqua;
+}
+.yanse
+{
+        color: tomato;
+}
+.jinghua1
+{
+        z-index: 999;
+        height: 700px;
+        width: 400px;
+        /* background-color: aqua; */
+        margin-top: 80px;
+        margin-left: 640px;
+        position: absolute;
+        background: url(../img/img3/n.jpg) no-repeat top center;
+        background-size: 100% 100%;
+        opacity: 1;
+        /* display: none; */
+        position: fixed;
+}
+.daxiao
+{
+        font-size: 0.5em;
+}
+.jsxx3
+{
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 12px;
+        color: aliceblue;
+        font-size: 0.5em;
+        width: 300px;
+}
+.green
+{
+        color: greenyellow;
+}
+.red
+{
+        color: red;
+}
+.b1
+{
+        margin-left: 190px;
+}
